@@ -1,0 +1,99 @@
+func spaceThing(s string) int {
+	count := 0
+	x := 0
+	c2 := getTermDim()
+	c3 := rmlastrune(c2)
+	b, err := strconv.Atoi(c3)
+	fmt.Println("terminalwidth:", b)
+	if err == nil {
+		fmt.Print("")
+	}
+	for i := 0; i < len(s); i++ {
+		if s[i] == ' ' {
+			count++
+		}
+	}
+	fmt.Println("spaces:       ", count)
+	if count > 0 {
+		x = b / count
+		fmt.Println("spacelength:  ", x)
+	}
+	return x
+}
+
+func rmlastrune(s string) string {
+	x := []rune(s)
+	str := x[:3]
+	return string(str)
+}
+
+func getTermDim() string {
+	cmd := exec.Command("stty", "size")
+	cmd.Stdin = os.Stdin
+	size, err := cmd.Output()
+	x := strings.SplitAfter(string(size), " ")
+	if err != nil {
+		log.Fatal(err)
+	}
+	// fmt.Println(string(x[1]))
+	return string(x[1])
+}
+
+func getStringDim(s string) string {
+	ter := getTermDim()
+	termlen := rmlastrune(ter)
+	fmt.Println(termlen)
+	return string(x[1])
+}
+
+func AsciiOutput(words, asciiFont, justifyInput string) {
+	spaceThing(words)
+
+	func AsciiOutput(words, asciiFont, justifyInput string) {
+	count := 0
+	spaceThing(words)
+	if !checkAscii(words) {
+		log.Fatal("\nCharacter/s in input string is not valid.\n\n" +
+			"Please only use characters from the ascii table.\n\n" +
+			"Usage: go run . [STRING] [BANNER] [OPTION]\n\n" +
+			"Example: go run . something standard --align=right")
+	}
+	justifyReg := regexp.MustCompile(`^--align=(center|left|right|justify)\z`)
+	justifyCheck := justifyReg.MatchString(justifyInput)
+	if !justifyCheck {
+		log.Fatal("\nInvalid alignment specified.\n\n" +
+			"Please only choose one of either 'center', 'left', " +
+			"'right' or 'justify'.\n\n" +
+			"Usage: go run . [STRING] [BANNER] [OPTION]\n\n" +
+			"Example: go run . something standard --align=right")
+	}
+	alignment := justifyInput[8:]
+	result := make([]string, 8)
+	asciiNbr := 0
+	skipN := 0
+	txtlines := fileToSlice(asciiFont)
+	for i, r := range words {
+		if r == ' ' {
+			count++
+			x := strings.Split(words, " ")
+			z := convert(x)
+			b := strings.Join(x, "")
+			// fmt.Println(z)
+			fmt.Println(b)
+			fmt.Println(z)
+		}
+		if r == '\\' && words[i+1] == 'n' {
+			printAscii(result, alignment)
+			result = make([]string, 8)
+			skipN = 2
+		} else if skipN == 0 {
+			asciiNbr = int(r-' ')*9 + 2
+			addChar(asciiNbr, result, txtlines)
+			if skipN != 0 {
+				skipN = skipN - 1
+			}
+		}
+	}
+	printAscii(result, alignment)
+}
+//a

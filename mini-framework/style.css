@@ -1,0 +1,117 @@
+.learn-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: auto;
+  padding: 5px;
+  margin: 5px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.learn-bar .learn {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.learn-bar header {
+  display: block;
+}
+
+.learn-bar a {
+  font-weight: normal;
+  text-decoration: none;
+  color: #b83f45;
+}
+
+.learn-bar h3,
+.learn-bar h4,
+.learn-bar h5 {
+  margin: 10px 0;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #000;
+}
+
+.learn-bar h3 {
+  font-size: 24px;
+}
+
+.learn-bar h5 {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.learn-bar p {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.3;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.learn-bar hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px dashed #c5c5c5;
+  border-bottom: 1px dashed #c5c5c5;
+}
+
+.learn-bar em {
+  font-style: italic;
+}
+
+.learn-bar .speech-bubble {
+  position: relative;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 5px;
+}
+
+.learn-bar .speech-bubble:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 30px;
+  border: 13px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0, 0.04);
+}
+
+.learn-bar .quote {
+  border: none;
+  margin: 20px 0 60px 0;
+}
+
+.learn-bar .quote p {
+  font-style: italic;
+}
+
+.learn-bar .quote p:before {
+  content: '"';
+  font-size: 50px;
+  opacity: 0.15;
+  position: absolute;
+  top: -20px;
+  left: 3px;
+}
+
+.learn-bar .quote p:after {
+  content: '"';
+  font-size: 50px;
+  opacity: 0.15;
+  position: absolute;
+  top: -20px;
+  left: 3px;
+}
+
+.learn-bar .quote footer {
+  position: absolute;
+  bottom: -40px;
+  right: 0;
+}
+
+.learn-bar .quote footer a {
+  margin-left: 5px;
+  vertical-align: middle;
+}

@@ -1,0 +1,43 @@
+1:
+2:
+3:
+4: ! ' , . 1 : ; ` i l |
+5: ( ) ^
+6: sp " $ < > [ ] f j s t z { } ~
+7: ? K c e k r x
+8: % + / 0 2 3 5 6 7 8 9 B I N X Z \ a b d g h n o p q u v y
+9: & - 4 = C D E F G H J L M O P Q R S U _
+10: * @ T Y
+11: # A V w
+12: m
+13:
+14:
+15: W
+" \!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_\`abcdefghijklmnopqrstuvwxyz{|}~"
+
+case '%', '+', '/', '0', '2', '3', '5', '6', '7', '8', '9', 'B', 'I', 'N', 'X', 'Z', '\', 'a', 'b', 'd', 'g', 'h', 'n', 'o', 'p', 'q', 'u', 'v', 'y' : result = result + 8
+
+
+
+
+
+
+SHADOW
+
+1 length: 5
+  length: 6
+T length: 11
+w length: 19
+o length: 9
+  length: 6
+4 length: 9
+
+STANDARD
+
+1 length: 4
+  length: 6
+T length: 10
+w length: 11
+o length: 8
+  length: 6
+4 length: 9

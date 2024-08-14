@@ -1,0 +1,35 @@
+Requirements:
+60 FPS
+No frame drops
+Use RequestAnimationFrame
+Pause with Continue and Restart
+ScoreBoard
+Timer
+Lives
+KeyBoard Controls
+
+
+Todo for BrickBreaker:
+1. Ball movement ✓
+2. Ball bounce on walls ✓
+3. Ball bounce on bricks
+4. Paddle ✓
+5. Ball bounce on Paddle (optional bounce differently depending on where hit) ✓
+6. lose life when ball goes out of bounds/you miss like an idiot ✓
+7. Pause ✓
+8. Continue button and restart button
+9. Start button ✓
+10. Build level and add ball and paddle to board ✓
+11. Paddle movement linked to keypresses ✓
+12. some styling ish
+13. Brick gets deleted when hit by ball (R.I.P)
+14. Score gets updated when you do some sick gamer stuff
+15. Level "Box" that can't be changed
+
+Optional:
+1. "Cooler" animations and styling
+2. powerups for hitting certain bricks
+3. level 2: Bricks revengance ✓
+4. sound ✓
+5. hold shift to go faster ✓
+6. titles when reaching certain score / sounds ✓
